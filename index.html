@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>LSPD - Obsidian Map</title>
+      <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+      <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      
+      <style>
+            html, body {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            }
+            #map {
+			width: 600px;
+			height: 400px;
+		}
+        </style>
+   </head>
+   
+   <body>
+
+      <div id = "map" style = "width:920px; height:920px"></div>
+
+      <script>
+
+        var map = L.map('map', {
+            crs: L.CRS.Simple,
+            minZoom: -3
+        });
+    
+        var bounds = [[0,0], [8192,8192]];
+        var image = L.imageOverlay('gta-5-map.png', bounds).addTo(map);
+
+       var pin_1 = L.latLng([ 1405, 1075 ]); 
+	L.marker(pin_1).addTo(map);
+map.fitBounds(bounds);
+//	map.setView( [700, 1200], -3);
+    
+        
+    
+    </script>
+   </body>
+   
+</html>
