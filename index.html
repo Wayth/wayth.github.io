@@ -4,8 +4,8 @@
       <title>LSPD - Obsidian Map</title>
 
       <meta charset="utf-8" />
-      <link rel="stylesheet" href="//unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-      <script src="//unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+      <link rel="stylesheet" href="unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+      <script src="unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
       
       <style>
             html, body {
@@ -45,7 +45,7 @@
         */
 
         var latlngs_ballas = [[1590, 3742],[1440, 3925],[1350, 3835],[1490, 3666]];
-        var polygon_ballas = L.polygon(latlngs_ballas).addTo(map);
+        var polygon_ballas = L.polygon(latlngs_ballas, {color: "purple", weight: 1}).addTo(map);
         
         // lieu de transformation "Families"
         var pin_1 = L.latLng([1788,3540]); 
@@ -63,12 +63,7 @@
         var pin_4 = L.latLng([5012,4380]); 
 	    L.marker(pin_4).addTo(map).bindPopup('Lieu suspect');
 
-
-
-
-        
-        map.fitBounds(bounds);
-	//map.setView( [4000, 4000], -3);   
+    	map.setView([4096, 4096], -3);   
 
     </script>
    </body>
