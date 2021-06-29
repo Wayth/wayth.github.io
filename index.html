@@ -2,8 +2,8 @@
 <html>
    <head>
       <title>LSPD - Obsidian Map</title>
-      <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-      <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      <link rel = "stylesheet" href = //cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+      <script src = "//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
       
       <style>
             html, body {
@@ -33,9 +33,11 @@
         var bounds = [[0,0], [8192,8192]];
         var image = L.imageOverlay('gta-5-map.png', bounds).addTo(map);
 
-       var pin_1 = L.latLng([ 1405, 1075 ]); 
-	L.marker(pin_1).addTo(map);
-map.fitBounds(bounds);
+        var pin_1 = L.latLng([1405,1075]); 
+	    L.marker(pin_1).addTo(map);
+
+
+        map.fitBounds(bounds);
 //	map.setView( [700, 1200], -3);
     
         
