@@ -1,0 +1,17 @@
+html, body {   
+    background-color: #ccc;
+    }
+    #description {
+    width: 50%;
+    height: 100%;
+    float:left;
+    }
+    #map {
+    width: 50%;
+    height: 920px;
+    float:right;
+    }
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
