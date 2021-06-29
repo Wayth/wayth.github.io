@@ -2,8 +2,10 @@
 <html>
    <head>
       <title>LSPD - Obsidian Map</title>
-      <link rel = "stylesheet" href = //cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-      <script src = "//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="//unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+      <script src="//unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
       
       <style>
             html, body {
@@ -13,18 +15,15 @@
             background-color: #ccc;
             }
             #map {
-			width: 600px;
-			height: 400px;
+			width: 920px;
+			height: 920px;
 		}
         </style>
    </head>
    
    <body>
-
-      <div id = "map" style = "width:920px; height:920px"></div>
-
+      <div id = "map"></div>
       <script>
-
         var map = L.map('map', {
             crs: L.CRS.Simple,
             minZoom: -3
@@ -33,16 +32,49 @@
         var bounds = [[0,0], [8192,8192]];
         var image = L.imageOverlay('gta-5-map.png', bounds).addTo(map);
 
-        var pin_1 = L.latLng([1405,1075]); 
-	    L.marker(pin_1).addTo(map);
+        // lieu de présence gang
+
+        /*
+        var circle = L.latLng([1482, 3805], {
+        color: 'red',
+        fillColor: '#f333ff',
+        fillOpacity: 0.5,
+        radius: 5000
+        });
+        L.circle(circle).addTo(map);
+        */
+
+        var polygon_ballas = L.polygon([
+        [1548, 3734],
+        [1402, 3914],
+        [1307, 3828],
+        [1440, 3646],
+        ]).addTo(map);
+
+        // lieu de transformation "Families"
+        var pin_1 = L.latLng([1788,3540]); 
+	    L.marker(pin_1).addTo(map).bindPopup('Transfo Families ?');
+
+        // lieu de ?? "Ballas"
+        var pin_2 = L.latLng([1579,3874]); 
+	    L.marker(pin_2).addTo(map).bindPopup('Activité Ballas');
+
+        // lieu de culture? "xxx"
+        var pin_3 = L.latLng([6322,5200]); 
+	    L.marker(pin_3).addTo(map).bindPopup('Lieu de culture ?');
+
+        // lieu suspect ? "xxx"
+        var pin_4 = L.latLng([5012,4380]); 
+	    L.marker(pin_4).addTo(map).bindPopup('Lieu suspect');
 
 
-        map.fitBounds(bounds);
-//	map.setView( [700, 1200], -3);
-    
+
+
         
-    
+        map.fitBounds(bounds);
+	//map.setView( [4000, 4000], -3);   
+
     </script>
    </body>
-   
+  
 </html>
