@@ -44,13 +44,9 @@
         L.circle(circle).addTo(map);
         */
 
-        var polygon_ballas = L.polygon([
-        [1548, 3734],
-        [1402, 3914],
-        [1307, 3828],
-        [1440, 3646],
-        ]).addTo(map);
-
+        var latlngs_ballas = [[1590, 3742],[1440, 3925],[1350, 3835],[1490, 3666]];
+        var polygon_ballas = L.polygon(latlngs_ballas).addTo(map);
+        
         // lieu de transformation "Families"
         var pin_1 = L.latLng([1788,3540]); 
 	    L.marker(pin_1).addTo(map).bindPopup('Transfo Families ?');
