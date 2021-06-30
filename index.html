@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>LSPD - Obsidian Map</title>
-      <meta charset="utf-8" />
-      <link rel="stylesheet" href="//unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-      <link rel="stylesheet" href="index.css">
-      <link rel="icon" type="image/png" href="favicon.png" />
-      <script src="//unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-   </head>
+    <head>
+        <title>LSPD - Obsidian Map</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="//unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <script src="//unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    </head>
    
    <body>
 
@@ -49,12 +49,12 @@
 	    L.marker(pin_2).addTo(map).bindPopup('Activité Ballas');
 
         // lieu de culture? "xxx"
-        var pin_3 = L.latLng([6322,5200]); 
+        var pin_3 = L.latLng([6362,5200]); 
 	    L.marker(pin_3).addTo(map).bindPopup('Lieu de culture ?');
 
         // lieu suspect ? "xxx"
-        var pin_4 = L.latLng([5012,4380]); 
-	    L.marker(pin_4).addTo(map).bindPopup('Lieu suspect');
+        var pin_4 = L.latLng([5053,4390]); 
+	    L.marker(pin_4).addTo(map).bindPopup('<p>Lieu suspect<br /><a href="trouver_sandy.png" target="_blank">Photo 1</a></p>');
 
     	map.setView([4096, 4096], -3);   
 
