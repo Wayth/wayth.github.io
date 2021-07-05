@@ -1,17 +1,34 @@
 html, body {   
     background-color: #ccc;
+    margin: 0;
     }
     #description {
     width: 50%;
-    height: 100%;
+    height: 100vh;
     float:left;
     }
     #map {
     width: 50%;
-    height: 920px;
+    height: 100vh;
     float:right;
     }
     h2{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
+    }
+    #footer {
+        position: fixed;
+        padding: 10px 10px 0px 10px;
+        bottom: 0;
+        width: 100%;
+        /* Height of the footer*/ 
+        height: 30px;
+    }
+    @media (max-width: 768px){
+        #description{
+            float: inherit; width: 100vw;
+        }
+        #map{
+            float: inherit; width: 100vw;
+        }
     }

@@ -37,29 +37,56 @@
         L.circle(circle).addTo(map);
         */
 
-        var latlngs_ballas = [[1590, 3742],[1440, 3925],[1350, 3835],[1490, 3666]];
+        var latlngs_ballas = [[1498,3665],[1550,3788],[1442,3915],[1350,3838]];
         var polygon_ballas = L.polygon(latlngs_ballas, {color: "purple", weight: 1}).addTo(map);
+
+        var latlngs_bloods = [[2377,2684],[2431,2726],[2383,2777],[2348,2723]];
+        var polygon_bloods = L.polygon(latlngs_bloods, {color: "red", weight: 1}).addTo(map);
+
+        var latlngs_families = [[1634,3588],[1683,3629],[1607,3720],[1515,3642],[1560,3589]];
+        var polygon_families = L.polygon(latlngs_families, {color: "green", weight: 1}).addTo(map);
+
+        var latlngs_bikers = [[6935,3733],[6981,3778],[6946,3813],[6900,3768]];
+        var polygon_bikers = L.polygon(latlngs_bikers, {color: "black", weight: 1}).addTo(map);
         
         // lieu de transformation "Families"
         var pin_1 = L.latLng([1788,3540]); 
-	    L.marker(pin_1).addTo(map).bindPopup('Transfo Families ?');
+	    L.marker(pin_1).addTo(map).bindPopup(`<p>Transfo Families ?<br />
+            <a href="medias/famillies_1.jpg" target="_blank">Photo 1</a></p>             
+            `);
 
         // lieu de ?? "Ballas"
         var pin_2 = L.latLng([1579,3874]); 
-	    L.marker(pin_2).addTo(map).bindPopup('Activité Ballas');
+	    L.marker(pin_2).addTo(map).bindPopup(`<p>Activité Ballas<br />
+            <a href="medias/ballas_1.jpg" target="_blank">Photo 1</a><br/>
+            <a href="medias/ballas_2.jpg" target="_blank">Photo 2</a><br/>
+            <a href="medias/ballas_3.jpg" target="_blank">Photo 3</a><br/>
+            <a href="medias/ballas_4.jpg" target="_blank">Photo 4</a><br/>           
+            `);
 
         // lieu de culture? "xxx"
         var pin_3 = L.latLng([6322,5200]); 
-	    L.marker(pin_3).addTo(map).bindPopup('Lieu de culture ?');
+	    L.marker(pin_3).addTo(map).bindPopup(`<p>Lieu de culture ?<br />
+            <a href="medias/cana_1.jpg" target="_blank">Photo 1</a></p>            
+            `);
 
         // lieu suspect ? "xxx"
         var pin_4 = L.latLng([5012,4380]); 
-	    L.marker(pin_4).addTo(map).bindPopup('Lieu suspect');
+	    L.marker(pin_4).addTo(map).bindPopup(`<p>Lieu suspect<br />
+            <a href="medias/trouver_sandy.png" target="_blank">Photo 1</a></p>        
+            `);
+
+        // activité suspecte ? "xxx"
+        var pin_5 = L.latLng([6813,3638]);
+	    L.marker(pin_5).addTo(map).bindPopup(`<p>Activité suspecte dans les environs<br/> 
+            <a href="medias/paleto_1.jpg" target="_blank">Photo 1</a><br/></p>
+            `);
 
     	map.setView([4096, 4096], -3);   
 
         </script>
     </div>
+    <footer id="footer">v.20210705.1</footer>
    </body>
   
 </html>
