@@ -48,6 +48,9 @@
 
         var latlngs_bikers = [[6935,3733],[6981,3778],[6946,3813],[6900,3768]];
         var polygon_bikers = L.polygon(latlngs_bikers, {color: "black", weight: 1}).addTo(map);
+
+        var latlngs_vagos = [[1339,3886],[4410,3949],[1321,4054],[1248,3991]];
+        var polygon_vagos = L.polygon(latlngs_vagos, {color: "yellow", weight: 1}).addTo(map);
         
         // lieu de transformation "Families"
         var pin_1 = L.latLng([1788,3540]); 
@@ -82,11 +85,17 @@
             <a href="medias/paleto_1.jpg" target="_blank">Photo 1</a><br/></p>
             `);
 
+        // activité suspecte ? "xxx"
+        var pin_6 = L.latLng([4423,4124]);
+	    L.marker(pin_6).addTo(map).bindPopup(`<p>Lieu de culture<br/> 
+            <a href="" target="_blank">Photo à venir</a><br/></p>
+            `);
+
     	map.setView([4096, 4096], -3);   
 
         </script>
     </div>
-    <footer id="footer">v.20210705.1</footer>
+    <footer id="footer">v.20210719.1</footer>
    </body>
   
 </html>
